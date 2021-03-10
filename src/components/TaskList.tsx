@@ -22,7 +22,9 @@ export function TaskList() {
         title: newTaskTitle,
         isComplete: false
       }
-      setTasks(oldState => [...oldState, newTask])
+      setTasks(oldState => [...oldState, newTask]);
+
+      setNewTaskTitle('');
   }
 
   function handleToggleTaskCompletion(id: number) {
@@ -48,7 +50,7 @@ export function TaskList() {
         <div className="input-group">
           <input 
             type="text" 
-            placeholder="Adicionar novo todo" 
+            placeholder="Adicionar novo to.do" 
             onChange={(e) => setNewTaskTitle(e.target.value)}
             value={newTaskTitle}
           />
